@@ -1,3 +1,122 @@
-<!DOCTYPE html>
 
-<p>hoi ik ben jana </P>
+<!DOCTYPE html>
+<html lang="en"><!-- Putting the language code here will help for example text to speech (and in the future, hypehenation)-->
+
+    <head>
+        <!-- The classical Cartesian distinction, head and body!
+            In the head comes all the metadata the page needs to function-->
+
+        <title>Jana Blom - how to make written text accesable and attractive (for people with ADHD)</title> <!-- This is the title shown in the window bar, tab, bookmark. It is the title used for Facebook by default, but that can be overridden  -->
+
+        <meta charset="utf-8"/> <!-- You need this so the browser can understand ‘typographic quotes’ and accented characters éëê etc.-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- Stops mobile browsers from ‘zooming out’: this allows you to create specific layout for mobile -->
+
+        <!-- A short description of the page: -->
+        <meta name="description" content="
+
+It is not that people with ADHD are not interested in written content, but reading a substantial text requires quite a bit of concentration, which people with ADHD lack and causes them to see reading as an unattractive task.
+
+In addition, written text is often presented by means of a book, newspaper, or (digital) product consisting solely of text, little hierarchy and hardly any use of color. This increases the unattractiveness of reading and discourages the person with ADHD even further.
+
+As a graphic designer I would like to make reading more enjoyable for people with AHDH by helping them to stay concentrated. In my thesis I will examine how written information can be presented as attractive as possible for people with ADHD.
+
+I want to explore if adjustments in the use of color, typography, composition and substance will have a positive contribution in helping adults with ADHD to retain their concentration while reading written text.
+
+For this research, I will be studying the available literature on ADHD and graphic design, which will form the base on the experiments I will be conducting. The experiments will be held with people who have ADHD and I will compare the results with people who do no have the disorder. I will discuss the experiments with a psychologist and ADHD specialist. The outcome of the experiments will hopefully enable me to make recommendations on how to present written text as attractive as possible to people with ADHD.
+
+The aim of my thesis is to focus on the abilities of adults with ADHD. I want to emphasize what they can do instead of what they can’t do.">
+                
+        <!-- This is the title used by Facebook/Twitter: they recommend to leave out the site name -->
+        <meta property="og:title" content="how to make written text accesable and attractive" />
+        <!-- This is the the preview image used by Facebook/Twitter.
+             Facebook currently prefers a 1200x630 image
+             Import: this has to be an absolute url including the domain name -->
+        <meta property="og:image" content="http://kabk.github.io/govt4-coding/govt-thesis-16-jana_blom-what-can-a-graphicdesigner-do-toincrease-readability-adhd/images/ADHD_kast.jpg" />
+        
+
+        <!-- This metadata encodes the author of the page. It is currently not used by Facebook, Twitter,
+             but the script generating our index does use it. -->
+        <meta property="og:author" content="Blom, Jana"/>
+        <meta property="dc:creator" content="Blom, Jana"/>
+
+        <!-- When you first published the page, and when it was last modified -->
+        <meta property="dc:created" content="2015-12-05T00:00:00Z" />
+        <meta property="dc:modified" content="2015-12-05T00:00:00Z" />
+        
+        <!-- Link stylesheets!-->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" /> <!-- This normalize.css file takes care of some inconsistencies between browsers -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" /><!-- Here I put the rest of my styles-->
+        
+        <!-- The JavaScript files we don’t link here but at the end of the file -->
+
+    </head>
+    <body id="example">
+        <header> <!-- In HTML5 there are the elements header, nav, article and aside that are just like divs (blocks)… 
+                      The only difference is that through their name, they indicate their function,
+                      so it helps in structuring the code -->
+                 <!-- Note: the <head> tag is invisible metadata, the <header> tag is visible on the page!-->
+            <h1><a href="index.html">JANA BLOM THESIS PREVIEW</a></h1> <!-- HTML allows for six levels of headings.
+                                                                 The convention is to use h1 for the site name, h2 for the article namee 
+                                                                 h3 for the section name, h4 for the subsection name etc.
+                                                                 Search engines rely on these headers -->
+        </header>
+        <nav>
+            <h5>Menu</h5>
+            <ul>
+                <li><a href="pages/abstract.html">Abstract</a></li>
+
+            </ul>
+                        
+
+        </nav>
+        <article> <!-- I’ve put the main text in an ‘article’ tag. By default we will get a kind of static, blog style layout,
+                       where it will be one long scroll to the bottom. If you want to take elements of your thesis and position
+                       them in different ways, you might need to divide them up into <section>’s or <div>’s before you can
+                       position them through CSS -->
+            <h2 id="metadata-search-engines-social-networks-a-primer">Abstract</p></h2>
+            <!-- This is the paragraph! The main unit of text. You can add margin after a
+                  paragraph, and indent the first line, through CSS.
+                  Within the paragraph, you can use the <br/> tag to do a line break.
+                  If you want to have an indent after the line break, but not at the beginning
+                  of the paragraph, you will have to do some trickery because this CSS is not
+                  yet supported.
+                  You might have noticed that HTML doesn’t respect the hard returns you put
+                  into it. You need to use <p> and <br/> tags to break lines. -->
+         
+            <p>In my thesis I examine to what extent graphic design can make written information more attractive and more accessible to people with ADHD.
+
+It is not that people with ADHD are not interested in written content, but reading a substantial text requires quite a bit of concentration, which people with ADHD lack and causes them to see reading as an unattractive task.
+
+In addition, written text is often presented by means of a book, newspaper, or (digital) product consisting solely of text, little hierarchy and hardly any use of color. This increases the unattractiveness of reading and discourages the person with ADHD even further.
+
+As a graphic designer I would like to make reading more enjoyable for people with AHDH by helping them to stay concentrated. In my thesis I will examine how written information can be presented as attractive as possible for people with ADHD.
+
+I want to explore if adjustments in the use of color, typography, composition and substance will have a positive contribution in helping adults with ADHD to retain their concentration while reading written text.
+
+For this research, I will be studying the available literature on ADHD and graphic design, which will form the base on the experiments I will be conducting. The experiments will be held with people who have ADHD and I will compare the results with people who do no have the disorder. I will discuss the experiments with a psychologist and ADHD specialist. The outcome of the experiments will hopefully enable me to make recommendations on how to present written text as attractive as possible to people with ADHD.
+
+The aim of my thesis is to focus on the abilities of adults with ADHD. I want to emphasize what they can do instead of what they can’t do.</p>
+
+            <div class="footnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><p> ? <a href="#fnref1">↩</a></p></li>
+            <li id="fn2"><p> ? >  ‘<a href="https://developers.google.com/structured-data/">oké</a>’.<a href="#fnref2">↩</a></p></li>
+            </ol>
+            </div>
+
+        </article>
+    <script src="js/jquery-1.11.3.js"></script> <!-- 
+        With the script tags you put scripts and load in external scripts.
+        you always need to explicitly <open> and </close> the script tag
+        Here we are loading in jQuery. jQuery is a library that contains a lot functions that are
+        like building blocks for scripts. It makes it easier to write your own scripts.
+        Also, many examples you will find online will use jQuery (you can recognise it
+        it if they use the $ sign). In the case you will first need to load jQuery-->
+    <script src="js/scripts.js"></script>
+        <!-- We use an external file for our scripts, just like we use an external file for
+             our css styles. -->
+    </body>
+    
+</html>
