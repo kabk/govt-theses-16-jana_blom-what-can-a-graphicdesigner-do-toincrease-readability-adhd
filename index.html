@@ -1,122 +1,370 @@
 
 <!DOCTYPE html>
-<html lang="en"><!-- Putting the language code here will help for example text to speech (and in the future, hypehenation)-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!-- ** see note -->
 
     <head>
-        <!-- The classical Cartesian distinction, head and body!
-            In the head comes all the metadata the page needs to function-->
+        <!-- The classical Cartesian distinction, head and body! In the head comes all the metadata page needs to function-->
 
-        <title>Jana Blom - how to make written text accesable and attractive (for people with ADHD)</title> <!-- This is the title shown in the window bar, tab, bookmark. It is the title used for Facebook by default, but that can be overridden  -->
+        <title>to what extent graphic design can make written information more attractive and more accessible to people with ADHD | Jana Blom</title> <!-- This is the title shown in the Window bar -->
 
-        <meta charset="utf-8"/> <!-- You need this so the browser can understand ‘typographic quotes’ and accented characters éëê etc.-->
+        <meta charset="utf-8"> <!-- You need this so the browser can understand ‘typographic quotes’ and accented characters éëê etc.-->
 
-        <meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- Stops mobile browsers from ‘zooming out’: this allows you to create specific layout for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This tag is important if we make a responsive site
+                                                                                  see http://kabk.github.io/govt4-coding/responsive-layout.html -->
 
-        <!-- A short description of the page: -->
-        <meta name="description" content="
+        <meta name="description" content="In my thesis I examine to what extent graphic design can make written information more attractive and more accessible to people with ADHD.<br><br>
 
-It is not that people with ADHD are not interested in written content, but reading a substantial text requires quite a bit of concentration, which people with ADHD lack and causes them to see reading as an unattractive task.
+        It is not that people with ADHD are not interested in written content, but reading a substantial text requires quite a bit of concentration, which people with ADHD lack and causes them to see reading as an unattractive task.
+<br><br>
+In addition, written text is often presented by means of a book, newspaper, or (digital) product consisting solely of text, little hierarchy and hardly any use of color. This increases the unattractiveness of reading and discourages the person with ADHD even further.<br><br>
 
-In addition, written text is often presented by means of a book, newspaper, or (digital) product consisting solely of text, little hierarchy and hardly any use of color. This increases the unattractiveness of reading and discourages the person with ADHD even further.
+As a graphic designer I would like to make reading more enjoyable for people with AHDH by helping them to stay concentrated. In my thesis I will examine how written information can be presented as attractive as possible for people with ADHD.">
+        
+        <!-- The following metadata can be useful for archiving -->
+        
+        <meta property="dc:creator" content="Jana Blom">
+        <meta property="dc:created" content="2016-01-13T00:00:00Z">
+        <meta property="dc:modified" content="2016-01-13T00:00:00Z">
+        <meta property="og:image" content="http://kabk.github.io/govt-theses-15/images/screenshots/govt-theses-15-menno-de-bruijn-the-most-important-side-issue-in-the-world-football-as-a-ritual.png" />
+        
+        <meta property="og:title" content="How can I, as graphic designer make written information more accesible to people with ADHD?" /><!-- The title that appears on Facebook-->
+        <meta property="dc:title" content="How can I, as graphic designer make written information more accesible to people with ADHD?" /><!-- Specify the title with the Dublin Core Metadata standard for archival purposes-->
 
-As a graphic designer I would like to make reading more enjoyable for people with AHDH by helping them to stay concentrated. In my thesis I will examine how written information can be presented as attractive as possible for people with ADHD.
-
-I want to explore if adjustments in the use of color, typography, composition and substance will have a positive contribution in helping adults with ADHD to retain their concentration while reading written text.
-
-For this research, I will be studying the available literature on ADHD and graphic design, which will form the base on the experiments I will be conducting. The experiments will be held with people who have ADHD and I will compare the results with people who do no have the disorder. I will discuss the experiments with a psychologist and ADHD specialist. The outcome of the experiments will hopefully enable me to make recommendations on how to present written text as attractive as possible to people with ADHD.
-
-The aim of my thesis is to focus on the abilities of adults with ADHD. I want to emphasize what they can do instead of what they can’t do.">
+        
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        
                 
-        <!-- This is the title used by Facebook/Twitter: they recommend to leave out the site name -->
-        <meta property="og:title" content="how to make written text accesable and attractive" />
-        <!-- This is the the preview image used by Facebook/Twitter.
-             Facebook currently prefers a 1200x630 image
-             Import: this has to be an absolute url including the domain name -->
-        <meta property="og:image" content="http://kabk.github.io/govt4-coding/govt-thesis-16-jana_blom-what-can-a-graphicdesigner-do-toincrease-readability-adhd/images/ADHD_kast.jpg" />
-        
-
-        <!-- This metadata encodes the author of the page. It is currently not used by Facebook, Twitter,
-             but the script generating our index does use it. -->
-        <meta property="og:author" content="Blom, Jana"/>
-        <meta property="dc:creator" content="Blom, Jana"/>
-
-        <!-- When you first published the page, and when it was last modified -->
-        <meta property="dc:created" content="2015-12-05T00:00:00Z" />
-        <meta property="dc:modified" content="2015-12-05T00:00:00Z" />
-        
         <!-- Link stylesheets!-->
         <link rel="stylesheet" type="text/css" href="css/normalize.css" /> <!-- This normalize.css file takes care of some inconsistencies between browsers -->
         <link rel="stylesheet" type="text/css" href="css/style.css" /><!-- Here I put the rest of my styles-->
-        
-        <!-- The JavaScript files we don’t link here but at the end of the file -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+	    <script src="js/modernizr.custom.js"></script>
+	    <script src="js/jquery.min.js"></script><style type="text/css"></style>
+	    <script>
+	    $(function() {
+	      $('a[href*=#]:not([href=#])').click(function() {
+	        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
+	          var target = $(this.hash);
+	          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	          if (target.length) {
+	            $('html,body').animate({
+	              scrollTop: target.offset().top
+	            }, 1000);
+	            return false;
+	          }
+	        }
+	      });
+	    });
+      $( window ).mousemove(function( event ) {
+        $("#progress").css("top", event.pageY);
+      });
+
+	    </script>
     </head>
-    <body id="example">
+    <body>
+      <div id="progress">
+</div>
+
         <header> <!-- In HTML5 there are the elements header, nav, article and aside that are just like divs (blocks)… 
                       The only difference is that through their name, they indicate their function,
                       so it helps in structuring the code -->
                  <!-- Note: the <head> tag is invisible metadata, the <header> tag is visible on the page!-->
-            <h1><a href="index.html">JANA BLOM THESIS PREVIEW</a></h1> <!-- HTML allows for six levels of headings.
-                                                                 The convention is to use h1 for the site name, h2 for the article namee 
-                                                                 h3 for the section name, h4 for the subsection name etc.
-                                                                 Search engines rely on these headers -->
+              
+              <div id="headerimg">
+				  	<img src="images/header.png" alt="">
+				  </div>
+
         </header>
         <nav>
-            <h5>Menu</h5>
-            <ul>
-                <li><a href="pages/abstract.html">Abstract</a></li>
-
-            </ul>
-                        
-
+            <ul> <!-- <ul> means unordered list. Instead of a ist of links like this, you could also make a paragraph and do many <br/>’s
+                      The advantage of the list is that each list element has their own node (<li>), which gives you more control
+                      over styling through CSS, and makes it more easy to add JavaScript behaviours (accordeon etcetera). -->
+			    <li><a href="#inleiding">Inleiding</a></li>
+                <li><a href="#WatisADHD?">Wat is ADHD?</a></li>
+                <li><a href="#Eigen ervaring">Eigen ervaring</a></li>
+                <li><a href="#vormgeving">Vormgeving</a></li>
+                <li><a href="#Interviews">Interviews</a></li>
+                <li><a href="#Conclusie">Conclusie</a></li>
+                <li><a href="#Kritische">Kritische zelfreflectie</a></li>
+                <li><a href="#Eindnoten">Eindnoten</a></li>
+                <li><a href="#DSM-IV">DSM-IV</a></li>
+         
+                
+				            </ul>
         </nav>
+        
+          
         <article> <!-- I’ve put the main text in an ‘article’ tag. By default we will get a kind of static, blog style layout,
                        where it will be one long scroll to the bottom. If you want to take elements of your thesis and position
                        them in different ways, you might need to divide them up into <section>’s or <div>’s before you can
                        position them through CSS -->
-            <h2 id="metadata-search-engines-social-networks-a-primer">Abstract</p></h2>
-            <!-- This is the paragraph! The main unit of text. You can add margin after a
-                  paragraph, and indent the first line, through CSS.
-                  Within the paragraph, you can use the <br/> tag to do a line break.
-                  If you want to have an indent after the line break, but not at the beginning
-                  of the paragraph, you will have to do some trickery because this CSS is not
-                  yet supported.
-                  You might have noticed that HTML doesn’t respect the hard returns you put
-                  into it. You need to use <p> and <br/> tags to break lines. -->
-         
-            <p>In my thesis I examine to what extent graphic design can make written information more attractive and more accessible to people with ADHD.
+           
+		<div class="sections">
+            <section id="inleiding"><h2>Inleiding</h2></section>
+		</div>
+		<br/>
+		<br/>
+				
+            <p>Voor je ligt voor mij één van de moeilijkste opgaves van mijn leven. 
+Een scriptie. Een scriptie vol met tekst... ja Een tekst over een onderwerp dat mij zodanig boeit dat ik er wel 5000 woorden aan kan wijdde . Voor ik startte aan de academie kwam ik erachter dat zelfs bij een kunstacademie een scriptie hoort. Daardoor begon ik te twijfelen of het wel zin had aan de opleiding te beginnen. Want dat zou betekenen dat ik het niet af zou kunnen maken zonder godvergeten afschuwelijke ding een <b>SCRIPTIE</b> .
+</p>
 
-It is not that people with ADHD are not interested in written content, but reading a substantial text requires quite a bit of concentration, which people with ADHD lack and causes them to see reading as an unattractive task.
+<p>Maar wat nou als ik mijn weerstand voor het schrijven van de scriptie gebruik om te onderzoeken waarom ik het zo lastig vind teksten te schrijven en lezen? Hoezo kan ik het ene artikel wel volgen terwijl ik bij de andere niet verder kom dan de derde zin? Het zullen verschillende redenen zijn waarvan de vormgeving een groot onderdeel is. Een tijdje terug ben ik om een aantal redenen een experiment aangegaan, nadat ik al ruim 10  jaar met ADHD gediagnosticeerd – Nooit eerder heb ik de behoefte gevoeld om hier  hulp bij te zoeken, als medicatie of iets dergelijks. Vorig jaar bleven er een aantal dingen zich voor doen en besloot ik toch eens te kijken wat PsyQ coaching mij te bieden had. In eerste instantie was ik niet van plan medicatie hierbij te betrekken maar toen ze  bij mijn intake gesprek vroegen of ik er voor open stond heb ik aangegeven dat ik open sta om meer info over in te winnen. De week erop zat ik met een gespecialiseerde dokter aan tafel die me vertelde welk medicijn het beste bij me zou passen. Op dat moment dacht ik: ‘misschien moet ik het gewoon proberen, om er achter te komen of ik nog steeds achter mijn visie sta en uit mijn ADHD trekjes juist mijn kracht haal.’ Waar ik eigenlijk heen wil is de wacht kamer van de ADHD afdeling bij PsyQ. In de wachtkamer staan namelijk 2 grote kasten. Die 2 kasten zijn helemaal gevuld met flyers en artikelen over ADHD. Stuk voor stuk zwart-wit, A4, soms linksboven aan elkaar geniet en in de meeste gevallen gevuld met lappen tekst. Elke keer als ik er voor stond vroeg ik me af: ‘voor wie die die flyers zijn?’ Het zou tenslotte gek zijn als deze voor de ADHD’ers bestemd zouden zijn... Toch? Of zouden er daadwerkelijk ADHD’ers zijn die hier met interesse op aflopen? Zelfs als je niet met ADHD gediagnosticeerd bent zou men, volgens mij, het liefst weglopen van deze kast. Maar wat zou er gebeuren met een ADHD’er als deze artikelen opnieuw zou worden vormgegeven? Door verschillende formaten, kleuren, lettertypes, plaatjes, illustraties aan toe te voegen. Of zou het al helpen de tekst op te breken in verschillende delen? Net zoals de grafisch ontwerper Christian Brown die een lettertype speciaal voor dyslectische mensen ontwierp door na te gaan wat dyslectische eigenschappen veroorzaakt. </p>
 
-In addition, written text is often presented by means of a book, newspaper, or (digital) product consisting solely of text, little hierarchy and hardly any use of color. This increases the unattractiveness of reading and discourages the person with ADHD even further.
+<p>Zo doende kwam ik tot de volgende onderzoeksvraag: Hoe kan informatie voor ADHD’ers zo aantrekkelijk mogelijk worden gepresenteerd?</p>
 
-As a graphic designer I would like to make reading more enjoyable for people with AHDH by helping them to stay concentrated. In my thesis I will examine how written information can be presented as attractive as possible for people with ADHD.
+<p>In dit onderzoek wil ik me vooral richten op de sterke kanten van ADHD’ers. Daarom zal ik eerst kort toelichten wat ADHD precies is en wat de meest voorkomende gevolgen daarvan zijn. Bovendien heeft ADHD hebben ook voordelen (Wildervanck, 2009:15)., namelijk: <br>
+– Creatief <br>
+– Gedreven in het gene dat ze interesseert (hyper focus)<br>
+– Probleem oplossend / vinding rijk<br>
+– Intuïtief<br>
+– Ziet snel verbanden<br>
+– Creatief en origineel<br>
+– Impulsiviteit dat leidt tot spontaniteit en in sociaal gedrag<br>
+</p>
 
-I want to explore if adjustments in the use of color, typography, composition and substance will have a positive contribution in helping adults with ADHD to retain their concentration while reading written text.
+<p>en aan de hand daarvan wil ik literair onderzoek doen. Naar aanleiding van dit onderzoek zal ik stellingen bedenken die ik zal toetsen en kan ik vervolgens aanbevelingen doen hoe informatie zo aantrekkelijk mogelijk kan worden gepresenteerd voor ADHD’ers (tekst model ‘Advising text on issue’)</p>
 
-For this research, I will be studying the available literature on ADHD and graphic design, which will form the base on the experiments I will be conducting. The experiments will be held with people who have ADHD and I will compare the results with people who do no have the disorder. I will discuss the experiments with a psychologist and ADHD specialist. The outcome of the experiments will hopefully enable me to make recommendations on how to present written text as attractive as possible to people with ADHD.
+<p>Daarnaast definieer ik wat grafisch vormgeving betekent en hoe je dit in kan zetten. Ik denk niet perse dat er 1 juiste manier uitkomt omdat iedere ADHDer andere behoeftes heeft. Vaak wordt er gesuggereerd dat iemand met ADHD rust, structuur en regelmaat nodig heeft, omdat ze al zoveel chaos in hun hoofd hebben. Maar dat is helemaal niet voor iedereen de oplossing. Het zelfde zal gelden voor de vormgeving, waar de ene het liefst veel ruis en drukte ziet wil de ander graag overzicht zien zonder al te veel poes pas. (Wildervanck, 2009:34).</P>
+      	
+      	
+      	<div class="sections">
+            <section id="WatisADHD?"><h2>1. Wat is ADHD?</h2></section>
+		</div>
+          
+            
+			<p>Bij rituelen denken mensen vaak aan de kerk of aan religieuze zaken; aan speciale ceremonies die met een zekere plechtigheid voltrokken worden. Bovendien wordt ritueel doorgaans geassocieerd met traditie en daarmee ofwel in het verleden geplaatst, ofwel in ‘niet-moderne’ locaties buiten onze moderniteit. Dat is echter een beperkte opvatting van ritueel. </p>
 
-The aim of my thesis is to focus on the abilities of adults with ADHD. I want to emphasize what they can do instead of what they can’t do.</p>
+<p>De woordenboeken leren ons dat een ritueel gedefineerd wordt als: <i>Een reeks handelingen met een speciale betekenis, een vaste handeling die iets symboliseert, een vast geformaliseerd handelingspatroon</i> en dat het <i>een handeling is waarbij bepaalde sociale identiteiten verworven of bevestigd worden.<a href="#fn1" name="fr1"><sup>1</sup></a></i> Deze definities sluiten religie dus absoluut niet uit in combinatie met ritueel, maar noemt deze ook niet als vereiste. Onderzoek naar het ritueel is in eerste instantie wel begonnen als de studie van religieus gedrag, maar in de loop van de tijd heeft het zich langzamerhand uit deze context bevrijd en is het ritueel geaccepteerd als een algemeen menselijk gegeven, dat op zekere hoogte religieus gedrag verklaart.</p>
 
-            <div class="footnotes">
-            <hr />
-            <ol>
-            <li id="fn1"><p> ? <a href="#fnref1">↩</a></p></li>
-            <li id="fn2"><p> ? >  ‘<a href="https://developers.google.com/structured-data/">oké</a>’.<a href="#fnref2">↩</a></p></li>
-            </ol>
-            </div>
+<p>Rituelen worden soms met veel pracht en praal omgeven, maar kunnen ook een meer alledaagse vorm hebben, zoals het verwelkomen van gasten, het ondertekenen van een overeenkomst of het zingen <i>van lang zal ze leven</i> op een verjaardag. Een ritueel is een herhalende handeling of gewoonte, maar niet elke herhalende handeling of gewoonte is een ritueel. Een blokje om voor het slapen gaan kan een vaste gewoonte zijn. Wanneer iemand denkt dat hij zonder dat blokje om niet goed zal slapen wordt het echter een geritualiseerde gewoonte. De ritualisering van een handeling is dus actief en betekenisvol, waar gewoontes passief en leeg van betekenis kunnen zijn. 
+</p>
 
+
+<h3>1.2 Soorten rituelen</h3>
+            
+			<p>Het verschil in definiëren van ritueel suggereert dat er vele verschillende opvattingen bestaan over wat rituelen zijn en de vormen die zij aannemen. Over het algemeen wordt er van drie soorten ritueel uitgegaan; cyclische, crisis- en overgangsrituelen. 
+Cyclische rituelen zijn gekoppeld aan de kalender. Het kan per jaar worden uitgevoerd, maar ook per maand, week of dag. Ongeacht de frequentie zijn het rituelen die gekoppeld zijn aan regelmatig terugkerende activiteiten. Herdenkingsrituelen van belangrijke gebeurtenissen en/of personen, zoals de dodenherdenking op 4 mei, vallen dus ook onder cyclische rituelen. <br/>
+Crisisrituelen zijn er omtrent tegenspoed en wanneer men in een crisis verkeert. In situaties waarin de mens controle verliest of chaos heerst, in situaties van machteloosheid, biedt het ritueel structuur, houvast en zingeving. <br/>
+Overgangsrituelen, ook wel <i>rites de passage</i> genoemd, betreffen rituelen die de overgang van de ene levensfase naar een volgende vertegenwoordigen of begeleiden. Er wordt afscheid genomen van het oude en de nieuwe situatie wordt gevierd, zoals bijvoorbeeld een huwelijk of een diploma-uitreiking. </p>
+
+<h3>1.3 Geen leven zonder rituelen</h3>
+            
+			<p>In de sociale wetenschappen heerst het algemeen gedeelde idee dat het moderne leven gekenmerkt wordt door het steeds verder uiteenvallen van traditionele verbanden zoals familie, dorp, buurt, stand en kerk. Deze instituties verliezen langzamerhand het vermogen mensen te binden en hen, in overeenstemming met de normen en waarden die erbinnen centraal staan, te vormen. Men is volgens deze opvatting meer individueel in het sociale leven komen te staan en wordt gedwongen zelf de weg te zoeken, zonder dat zij nog geleid worden door deze traditionele verbanden. </p>
+
+<p>De Franse socioloog en antropoloog Émile Durkheim (1858-1917) benadrukte in 1912 dat ook geseculariseerde samenlevingen rituelen nodig hebben. Durkheim, die zich met betrekking tot rituelen in het bijzonder richtte op religie, verklaarde de behoefte aan rituelen vanuit hun functie: een ritueel bevordert de sociale samenhang. Rituelen verenigd mensen door het delen van ervaringen die leiden tot identificatie met de groep. Hij veronderstelde dat er nieuwe vormen van collectief enthousiasme opwekkende feestelijke bijeenkomsten konden ontstaan die de samenbindende werking van godsdienstige bijeenkomsten zouden overnemen.<a href="#fn2" name="fr2"><sup>2</sup></a>
+
+<p>In navolging van Durkheim publiceerde Gerard Lukken in 1984 het boek <i>Geen leven zonder rituelen</i>, waarin hij wees op de crisis van het ritueel in onze samenleving en de onvervangbare plaats daarvan. In de periode die volgde veranderde de situatie grondig. In de jaren ’90 ontstond een vloedgolf aan nieuwe rituelen, zoals bijvoorbeeld de nationale feestdagen als Koninginnedag en de internationale voetbaltoernooien. Maar ook rituelen rondom de dood zoals bij de Bijlmerramp, werden gekenmerkt door een grote creativiteit. Dat men de rituelen heeft herontdekt gebeurde in zo’n omvang dat Lukken vijftien jaar na zijn boek <i>Geen leven zonder rituelen</i> kon spreken over <i>Rituelen in overvloed</i>. In het gelijknamige boek stelt Lukken dat een ritueel niet alleen gericht is op het ‘ik’ maar ook op de ander. Ook komt hij tot de conclusie dat de gedachte dat met de groei van de secularisatie het ritueel zou afnemen, een onjuiste is gebleken.<a href="#fn3" name="fr3"><sup>3</sup></a>  </p>
+
+
+			<div class="sections">
+            	<section id="Eigen ervaring"><h2>2. Eigen ervaring</h2></section>
+			</div>
+				
+				<p>Vandaag de dag is voetbal de populairste sport ter wereld. Verschillende factoren zijn hiervan de oorzaak. Sepp Blatter, de president van FIFA (<i>Fédération Internationale de Football Association</i>, het internationale bestuursorgaan van het moderne voetbal):</p>
+
+<blockquote>'Football is as old as the world (...) People have always played some form of football, from its very basic form of kicking a ball around to the game it is today.’  <a href="#fn8" name="fr8"><sup>8</sup></a> </blockquote>
+
+
+<p>Volgens de FIFA is de oudste vorm van voetbal terug te leiden naar China, twee tot drie eeuwen voor Christus. Bronnen afkomstig uit militaire handboeken van toen beschrijven een oefening genaamd <i>Tsu Chu</i>, waarin opponenten een leren bal gebruikten gevuld met veren en haren. Het doel was om de bal in een klein net, dat bevestigd was aan bamboe stokken, te krijgen terwijl ze zich ook moesten verdedigen tegen aanvallen. Varianten van het spel zijn ook gedocumenteerd in de Egyptische en Griekse samenleving, waaruit blijkt dat de sport een lange traditie en geschiedenis heeft. De oudste Europese aanwijzing voor het bestaan van voetbal stamt uit de 9e eeuw, en het oudste citaat komt uit de 12e eeuw van de bischop van Lincoln:</p>
+
+<blockquote>‘Four and twenty bonny boys, were playing at the ball. He kicked the ball with his right foot.’  <a href="#fn9" name="fr9"><sup>9</sup></a> </blockquote>
+
+<p>In de eeuwen hierna bleef het balspel zich ontwikkelen en stijgen in populariteit, vooral onder de arbeidersklasse, die het spel zagen als een kans om hun grieven te kanaliseren en te socialiseren met mensen van dezelfde achtergrond. In de 18e eeuw werd de sport zeer populair op de openbare scholen in het Verenigd Koninkrijk. Dit zorgde voor de introductie van specifieke regels voor het spel, die in 1848 werden opgesteld op een bijeenkomst in Cambridge, regels die vandaag de dag nog steeds gehanteerd worden. Vervolgens was Engeland in 1863 de eerste die een bestuursorgaan in de sport oprichtte, genaamd the <i>Football Association</i> (FA). <br/>
+De Britten worden ook beschouwd als essentieel bij het verspreiden van het spel over de wereld. Ze hadden, door hun formele rijk en het immense informele rijk van de wereldwijde economische en culturele banden, een grote reikwijdte om de sport te verspreiden. Zo was de eerste wedstrijd ooit buiten de Europese grenzen in Argentinië in 1867, onder leiding van een aantal Engelsen die op dat moment in het buitenland werkten.  
+Toch kunnen we de adoptie van het universeel geliefde tijdverdrijf niet volledig toeschrijven aan het geografische bereik en cultureel cachet van Groot-Brittannië en de Britse sport, laat staan dat het voetbal was dat zou aanslaan. Voetbal is namelijk ontstaan en verspreid in een tijd waarin veel andere sporten ook werden gecodificeerd: rugby, hockey, tennis en golf in Groot-Brittannië; American football, honkbal en basketbal in de Verenigde Staten; vechtsporten in Japan, en gymnastiek in Duitsland. Een van de redenen voor het aanslaan van voetbal is dat het zeer onwaarschijnlijk was dat, in een tijd van explosieve industrialisatie, de massasamenlevingen van de negentiende en twintigste eeuw een individuele sport zouden omarmen. Deze stonden verder van de meerderheid van deze groepen af, en de ruimte waarin ze worden gespeeld bieden niet de mogelijkheid van een enorm spektakel. Tennis en andere racketsporten zijn fysiek alleen geschikt voor een beperkt aantal toeschouwers rond hun velden, en de teamsport basketbal kampt met hetzelfde ‘probleem’. Een andere belangrijke factor van de aantrekkingskracht van voetbal onder teamsporten was de toegankelijkheid: het is eenvoudig, goedkoop en flexibel in termen van aantallen en ruimte, en het is gemakkelijk te leren.</p>
+
+<p>In 1885 werden Engelse spelers voor het eerst betaald voor het beoefenen van voetbal, en in de opvolgende eeuw groeide de sport, mede door de industrialisatie, in een enorm tempo. De wereldvoetbalbond FIFA werd in 1904 opgericht, in 1920 werden in heel Europa professionele competities georganiseerd en in 1930 werd het eerste wereldkampioenschap gehouden in Uruguay. Een van de belangrijkste ontwikkelingen omtrent de populariteit onder de massa was in 1958 toen het WK voetbal voor het eerst op de televisie te zien was. 
+				</p>
+				
+				<h3>2.2 Voetbal anno nu</h3>
+				<p>Mede door het uitzenden van voetbal is voetbal heden ten dage de meest populaire sport ter wereld. Landelijk gezien is voetbal enkel een sport in minderheid in Noord-Amerika, Australië en Zuid-Azië, waar respectievelijk honkbal, rugby en cricket groter zijn. Maar ook hier is het voetbal een stijgende kracht die jaarlijks aan populariteit wint. FIFA denkt dat er in de wereld ongeveer één miljard mensen redelijk formeel voetballen, maar niemand weet exact hoeveel mensen het spel spelen.<br/>
+Naast het aantal spelende personen is de sport nog vele malen groter als er gekeken wordt naar de supportersaantallen en kijkers. Wekelijks zitten er wereldwijd miljoenen mensen aan de buis gekluisterd of in het stadion zelf om hun favoriete team aan te moedigen. Een van de oorzaken hiervan is dat in de afgelopen dertig jaar sport het snelst groeiende segment van de entertainmentindustrie is geweest, en voetbal de snelst groeiende sport.<a href="#fn10" name="fr10"><sup>10</sup></a> Dit is vooral te danken aan tv. In de vroege jaren ’90 bereikte het <i>multichannel</i> tijdperk Europa. Tv-magnaten als Rupert Murdoch en Silvio Berlusconi gebruikte een aantal van de nieuwe kanalen om voetbal te laten zien. Het werd toen al snel duidelijk dat zelfs de populaire soaps, die decennialang hele naties aan de buis kluisterden, niet konden tippen aan de kijkersaantallen die de grote voetbalwedstrijden bereiken. 
+De mate van populariteit heeft er ook voor gezorgd dat er inmiddels miljarden omgaat in de wereld van het voetbal en spelers van club ruilen voor astronomische bedragen. In 2012 was de omzet van de Europese competities 19,8 miljard Euro en verdiende de FIFA, dat inmiddels uit meer leden bestaat dan de Verenigde Naties, rond de 4 miljard Euro aan het WK van 2014.<br/>
+Een jaarlijks ijkpunt om de populariteit van voetbal te meten is de <i>UEFA Champions League</i> (CL) finale. Deze wedstrijd werd voorheen qua aantal kijkers altijd voorbijgestreefd door de finale van de American Football-competitie, tot in 2009 de CL ‘won’. Het duel tussen Manchester United en FC Barcelona van dat jaar werd aanschouwd door 206 miljoen mensen wereldwijd, terwijl de finale van het ‘Amerikaanse voetbal’ tussen Pittsburgh Steelers en Arizona Cardinals 162 miljoen kijkers trok. Dit was overigens ook voor de National Football League een record. Sinds 2009 is de CL-finale de populairste van de twee gebleven. <br/>
+Bij internationale voetbaltoernooien als het Europees Kampioenschap en het Wereldkampioenschap stijgen de kijkersaantallen tot nog grotere hoogte met de finale als ultiem hoogtepunt. Keer op keer gaat deze finale de boeken in als het meest bekeken sportevenement ter wereld. 3.2 miljard mensen, wat neer komt op 46% van de wereldbevolking, hebben thuis minimaal één minuut thuis het WK van 2010 gekeken. De finale werd gezien door 909,6 miljoen mensen.<a href="#fn11" name="fr11"><sup>11</sup></a> Dit maakt het de grootste simultane menselijke collectieve ervaring ooit. Een feit dat een vroegere uitspraak van Kofi Anan kracht bij zet: </p>
+
+<blockquote>‘For 90 minutes at a time, people become one nation.’  <a href="#fn12" name="fr12"><sup>12</sup></a> </blockquote>
+
+<p>De vraag rijst of er een culturele praktijk globaler is dan voetbal. Vieringen van geboorte, dood en huwelijk zijn universeel en kunnen dus gezien worden als globaler. Het verschil is echter dat deze vieringen oneindig zijn in hun diversiteit, terwijl voetbal overal ter wereld gespeeld wordt volgens dezelfde regels. Zelfs geen enkele religie kan de geografische reikwijdte van voetbal evenaren. 
+ </p>
+ 
+ <img src="images/5.png" />
+				
+				<h3>2.3 Meer dan een spel </h3>
+				<p>Voor veel mensen, gemeenschappen en naties is voetbal veel meer dan enkel een spel. De ervaring gaat voorbij aan het daadwerkelijk kijken van de wedstrijd. </p>
+
+<blockquote>‘Some people believe football is a matter of life and death… I assure you it is much, much more important than that.’  <a href="#fn13" name="fr13"><sup>13</sup></a> </blockquote>
+
+<p>Zoals Bill Shankly, de legendarische oud-manager van de Engelse club Liverpool, beweerde kort voor hij overleed in 1981, kan de significantie van het voetbal nooit worden onderschat. Voetbal kan invloed hebben op het leven op nationaal en internationaal vlak, revoluties inspireren en oorlogen veroorzaken, evenals het de mogelijkheid heeft om vrede te creëren en verschillen te beslechten. <br/>
+De ‘voetbal oorlog’ tussen Honduras en El Salvador in 1969 is wellicht het meest bekende voorbeeld van de bredere implicaties van de sport. Tijdens de kwalificatie voor het wereldkampioenschap van 1970, raakten supporters slaags. Gevoegd bij al bestaande spanningen was dat aanleiding voor El Salvador om de aanval op het buurtland te openen. <i>La gure del futbol</i>, ook wel <i>de oorlog van 100 uur</i> genoemd, kostte drieduizend mensen het leven.</p>
+
+<p>Er zijn talloze andere voorbeelden en anekdotes over ‘voetbal oorlogen’, blijvende rivaliteit en symbolische overwinningen die alleen hun betekenis krijgen wanneer ze geïnterpreteerd worden binnen de grotere politiek-culturele achtergrond. In dergelijke gevallen wordt het stadion vaak een podium voor supporters om bijvoorbeeld politieke standpunten ten gehore te brengen, maar ook vooral visueel te uiten. Zo is het stadion Camp Nou van FC Barcelona geregeld een podium om de strijd voor onafhankelijkheid van Catalonia kracht bij te zetten. </p>
+
+<p>Maar naast het feit dat voetbal als katalysator voor revoluties en oorlogen kan fungeren, heeft het ook vooral de kracht om te binden en verschillen in bijvoorbeeld welvaart en etniciteit te slechten (figuur 1). Dit is goed te zien in het voetbalgekke Brazilië. In het Zuid-Amerikaanse land, waar elke wedstrijd op het afgelopen WK een nationale feestdag was, is voetbal een van de weinige elementen die het sentiment van Brazilië verenigt en de samenleving aan elkaar lijmt. Dat is ook de reden waarom het dramatisch is als het nationale team verliest. Het is dan namelijk niet enkel het voetbalteam dat verliest, het is je eigen identiteit als Braziliaan waaraan getwijfeld wordt. Om de populariteit van voetbal in Brazilië te schetsen: de drie meest voorkomende sociale instellingen in het leven van de gemiddelde Braziliaan, zijn zijn of haar religieuze tempel, de publieke gevangenis, en het voetbalveld. <br/>
+Voetbal kan dusdanig meer betekenis krijgen dat het in 2001 werd genomineerd voor de Nobel Vredes Prijs door de Zweedse wetgever Lars Gustafsson, die suggereerde dat voetbal helpt bij het verbeteren van de internationale betrekkingen.</p>
+
+<img src="images/1.png" />
+
+<p>Waar velen roepen: ‘het is maar een spelletje’ kan voetbal worden beschouwd als meer dan dit alleen. De mate waarin voetbal sociale conflicten theatraliseerd en als steunpunt fungeert voor gemeenschappen en solidariteit, suggereert dat het echte sporen achterlaat die blijven na een enkele wedstrijd, verbindingen die circuleren in de wereld buiten het stadion. Met name het WK lijkt voor velen op te treden als een collectief ritueel. 
+
+</p>
+
+				
+        <div class="sections">
+            <section id="vormgeving"><h2>3. Vormgeving</h2></section>
+		</div>				
+				<h3>3.1 Motivatie</h3>
+			 <p></p>
+				
+			
+			<h3>3.2 Concentratie</h3>
+				
+				<p>De voetbalgemeenschap in de breedste zin van het woord is een voorbeeld van een <i>imagined community</i>, een verbeelde gemeenschap waarvan de leden elkaar nooit allemaal persoonlijk kunnen kennen, maar onderling wel een binding voelen. Mensen zijn groepsdieren, we zijn graag samen. Volgens massapsycholoog Jaap van Ginneken beantwoord een voetbalevenement als een WK aan een diepgaande behoefte om ons te identificeren met iets wat onszelf overstijgt.<a href="#fn15" name="fr15"><sup>15</sup></a> Waar vroeger de kerken deze functie hadden gaan we, met Nederland als voorbeeld, nu als alternatief op in een oranje massa. We leven in een tijd van massale individualisering, maar de mondiale voetbalevenementen wijzen ons op het feit dat er desondanks behoefte is naar ‘het samen zijn’. </p>			
+			
+			<h3>3.3 Lettertypes</h3>
+				
+        <p></p>
+
+        <h3>3.4 Accentuering</h3>
+				<p></p>
+
+<img src="images/2.png" />
+
+<p>Thomas Quartair stelt dat rituelen vaak handelingen zijn die op het eerste gezicht nergens toe dienen:</p>
+
+<blockquote> ‘Je in oranje hullen en de straat versieren, heeft geen nut (…) Maar dat we dat met z’n allen doen, heeft alles te maken met de hang naar collectiviteit in deze sterk geïndividualiseerde samenleving.’  <a href="#fn24" name="fr24"><sup>24</sup></a> </blockquote>
+
+<p>Nationale kleuren en de handelingen waarbij deze worden ingezet worden dus symbolisch en zijn heilig in de context van het voetbal. Een symbool is een betekenisdrager; het heeft enerzijds een vorm of representatie, en anderzijds een betekenis. Het woord ‘symbool’ heeft zijn oorsprong in het Griekse werkwoord <i>symballoo</i> dat ‘bijeenbrengen’ betekent.<a href="#fn25" name="fr25"><sup>25</sup></a> Victor Turner omschrijft een symbool als het grondprincipe van de rituele structuur.<a href="#fn26" name="fr26"><sup>26</sup></a> Durkheim’s definitie van het heilige en symbolen omvat alle dingen die een gemeenschap collectief als heilig beschouwd, en kan dus vele vormen aannemen.<a href="#fn27" name="fr27"><sup>27</sup></a> Het collectieve ontzag en eerbied die collectiviteiten (fans, gemeenschappen, naties) hebben in de richting van bepaalde teams, de heilige ruimte waarin de teams spelen en fans samenkomen, en de verschillende symbolen (logo’s, kleding, vlaggen), iconen (sterren, helden), hymnen (volksliederen, Wij houden van Oranje) en rituelen die ze hebben, zijn de belangrijkste heilige elementen van het ritueel voetbal. </p>
+
+<p>De staten van <i>collective effervescence</i> zorgen er dus niet alleen voor dat individuen aan een gemeenschap gekoppeld worden, maar ook voor een sterk kader voor de creatie van symbolen en de belichaming van gedeelde betekenissen die de gemeenschap definiëren. De groepssymbolen die onderdeel zijn van het ritueel worden emotioneel geladen en worden zo ook effectief buiten het kader van het ritueel en vertegenwoordigen de groep. In het voetbal zijn dit de spelers, wapens, vlaggen, en vooral de kleuren en shirts. De shirts vertegenwoordigen de gemeenschap en de natie. Het zijn symbolen waarvan de waarde ook buiten de tijd en ruimte van het ritueel geldt. Dit kan gelden voor de dag voor of na een wedstrijd, maar ook voor een jaar na dato. Wanner je in het buitenland een voetbalshirt draagt laat je zien bij de gemeenschap te horen. Maar de shirts vertegenwoordigen vaak ook het overkoepelende geheel; het voetbal zelf. In het buitenland, met name in landen waar je de taal niet machtig bent, is er vaak weinig aanleiding tot een gesprek met wildvreemden, maar een voetbalshirt zorgt hier vrijwel altijd voor. <br/>
+De nationale vlag is een ander symbool dat van grote waarde is. De vlag is normaliter vanzelfsprekend al een symbool voor de natie, maar een voetbaltoernooi zorgt voor versterking van de waarde. Dit stelt ook Michael Mutz na een studie rond het EK van 2012; het ervaren van positieve collectieve emoties tijdens het toernooi zorgt voor toename van patriottisme na het evenement.<a href="#fn28" name="fr28"><sup>28</sup></a> Men identificeert zich meer met de groep en dus met de natie.<br/>
+Geschiedenis kan ook veel invloed hebben op het versterken van het nationalistische gevoel, waardoor de symbolen nog meer in waarde stijgen. Bij wedstrijden als tussen Rusland en voormalige Sovjet-Unie landen is het niet enkel meer land tegen land op het veld maar ook op maatschappelijk niveau. Dit vertaalt zich in het stadion in liederen en visuele elementen als spandoeken(figuur 3), en daarbuiten excelleert dit soms in fysieke botsingen. <br/>
+De invloed van de politiek-culturele aspecten en achtergronden op wedstrijden zijn rond die van Israel wellicht het duidelijkst. Israëlische voetbalclubs voetballen mee in de Europese toernooien en het nationale team van Israel werkt zijn kwalificatiewedstrijden ook in Europa af in plaats van op het eigen continent. Vanwege politieke problemen heeft het team in vijf verschillende werelddelen gespeeld omtrent de kwalificatie voor de WK’s. Europa blijkt het enige continent waar de veiligheid van zowel spelers als supporters gegarandeerd kan worden (figuur 4).</p>
+
+<img src="images/3.png" />
+
+<img src="images/4.png" />
+<p>Zoals Goldblatt verwoorde: <br/>
+
+<blockquote>'When in full carnival mode, the crowd can even move from out of the wings and take a place on stage. The opportunity that this provides for the collective dramatization of identities and social relationships, both spontaneous and organized, is without parallel in the field of global popular culture.’  <a href="#fn29" name="fr29"><sup>29</sup></a> 
+</blockquote>
+			
+
+
+<h3>3.3 Live: voetbal als media ritueel </h3>
+				
+				<p>Dat we überhaupt zo massaal kunnen deelnemen aan het ritueel komt voornamelijk door de massamedia. De massamedia en de voetbalevenementen zijn onlosmakelijk met elkaar verbonden. Met name de tv-producenten leggen alle gebeurtenissen vast, en kaderen en isoleren hierbij veel. Tot op zekere hoogte hebben zij de macht het verhaal te kleuren. Bij het WK van 2002 in Japan en Korea brachten Japanse ambtenaren en digitale media producenten dit naar een nieuw niveau. Ze kozen ervoor om hun land visueel te lokaliseren ten opzichte van de rest van de wereld en slaagden erin om dit ‘buitenlandse’ sportevenement om te smelten tot een Japans cultureel fenomeen. De integratie van voetbal in alle aspecten van de Japanse cultuur hielp het toe-eigenen van het WK als een Japans evenement.<a href="#fn30" name="fr30"><sup>30</sup></a> <br/>
+Naast dat de organisatoren een goed beeld van hun land willen tonen en de FIFA het toernooi zo goed mogelijk wil laten zien, wordt het evenement grotendeels gevormd door economische belangen. Ook de publieke feesten worden gevangen door het economisch bestel, zo ook het WK. Er gaan miljarden in om en vrijwel elke sponsor of organisatie speelt in op het evenement. Op televisie, radio, internet en in de printmedia wordt op alles ingespeeld zodat het ritueel nog massaler wordt. Hierbij maken ze veelal gebruik van de symbolen die van waarde zijn voor de verschillende groepen. Alle eerder genoemde elementen van het ritueel die ons bewust en onbewust aantrekken om eraan deel te nemen worden door dit alles massaal versterkt, waardoor je niet meer om het collectieve ritueel (lees: collectieve hype) heen kunt.<br/>
+Van Ginneken heeft het over stemmingsbesmetting in de economie.<a href="#fn31" name="fr31"><sup>31</sup></a> Gevoel speelt een aanzienlijke rol in economie, en dat ‘subjectieve gevoel’ staat niet op zichzelf maar is onderhevig aan sterke invloed van buitenaf. Dit is goed te begrijpen in analogie met applaus in het theater; het applaus dat soms moeizaam op gang komt maar vervolgens het hele publiek enthousiast krijgt. Al in de negentiende eeuw huurden theaterdirecteuren daarom ‘klapvee’ in, dat vanaf de voorste en achterste rijen het applaus op gang moest brengen. Om een groep van duizend mensen mee te krijgen in een wave, heb je maar drieëndertig enthousiastelingen nodig, beweert Van Ginneken. Zowel in de economie als in het theater verspreidt dat enthousiasme zich vervolgens als een virus. Door de televisie en het feit dat iedereen online is treedt nu ook buiten lijfelijke nabijheid die aanstekelijkheid op en verspreiden gevoelens explosief. Dit kan zorgen voor de collectieve hype, opgezweepte collectieve emoties, die zich razendsnel verspreiden. De beeldcultuur versterkt dat nog eens. <br/>
+De belangrijkste verandering die door de massamedia heeft plaatsgevonden is dus de verschuiving van de ruimte. Voorheen waren de stadions de ruimte waarin het ritueel zich voltrok; waar mensen collectief aanbidden en verenigen rond alles wat zij als heilig ervaren in de sport en waar zij bij elkaar komen op regelmatige basis, en waar dit dus ook visueel tot uiting komt. Zoals eerder aangekaart (1.4) wordt de ruimte van rituelen echter steeds minder plaatsgebonden door de intrede van de massamedia. Wat er op het veld gebeurd is alles behalve onbelangrijk, maar de massale deelname aan het ritueel gebeurd nu elders, en dat neemt alleen maar toe met de verschillende platforms voor discussie. Nu kan eenieder ook op de eerste rij zitten van achter een scherm thuis, in een kroeg of een andere publieke ruimte.<br/>
+Dit is een van de voornaamste redenen dat mondiale voetbalevenementen zich hebben kunnen ontwikkelen tot de grootste collectieve rituelen in de moderne wereld. Een rationele verklaring voor de wereldwijde gekte rond het WK in Brazilië is dan ook dat het nog nooit zo massaal werd uitgezonden. In Europa waren de zendtijden vaak <i>prime time</i>. Daar komt bij dat digitale media het enthousiasme-virus verspreiden met een ongekende snelheid. Met de wetenschap dat de wereld met je mee kijkt ontstaat het gevoel dat je zelf deelneemt aan het WK.<br/>
+De vaste ruimte is dus niet meer het stadion waar de wedstrijd plaats vind, maar overal waar toegang is tot een scherm. De wedstrijd vind dus nu ook plaats op pleinen, in kroegen, in lokale stadions en thuis, en wordt daar ook als live ervaren. Zo is het door de televisiemedia dat de tijd-ruimte van het ritueel de voorheen vaste omlijning in de vorm van het stadion en de (lokale) speeltijd wordt overschreden.<br/>
+Door de verschuiving van het ritueel naar een media ritueel is het (visuele) collectieve gedrag niet meer op de plek van het ritueel zelf en verschuift het zelfs naar online collectiviteit. In plaats van naar de wedstrijd zelf gaan kan er nu gekeken worden in talloze publieke ruimten, thuis en op werk. Het delen van de emoties en ervaringen is dan nog steeds fysiek en men neemt nog steeds lijfelijk deel aan het ritueel, zij het op verschillende plekken. Het delen van de ervaringen heeft zich de afgelopen jaren echter uitgebreid naar online. Het internet is een unieke combinatie van massaliteit en individualiteit, waar men graag laat zien wat er gedaan wordt. Je kunt nu alsnog collectiviteit ervaren, ook terwijl je de wedstrijd alleen kijkt. Het WK is tenslotte de grootste collectieve en simultane menselijke ervaring ter wereld; genoeg mensen om het mee te delen. De finale zorgde voor 280 miljoen interacties op Facebook door 88 miljoen mensen en bezorgde Twitter een nieuw record: 618.725 tweets per minuut. In totaal werd er 32.1 miljoen keer getwitterd over de finale. </p>
+
+<p>De Nigeriaanse-Amerikaanse schrijver, fotograaf en kunsthistoricus Teju Cole bracht deze online verschuiving van de finale van het WK van 2014 prachtig inzichtelijk. Voor 90 minuten lang zagen miljoenen mensen dezelfde bezienswaardigheid en ervoeren ze dezelfde emoties. De persoonlijke betekenissen van tijd werd de tijd van het spel, aldus Cole:</p>
+
+<blockquote>‘We live in different time zones, out of sync but aware of each other. Then the game begins and we enter the same time: the time of the game.’  <a href="#fn32" name="fr32"><sup>32</sup></a> </blockquote>
+<p>In samenwerking met Jer Thorp en Mario Klingemann maakte hij The Time of the Game, een gesynchroniseerd globaal overzicht van de WK finale. Cole vroeg zijn duizenden volgers op Twitter om foto’s te sturen van hun scherm met de wedstrijd. Hij vroeg hen een bijschrift toe te voegen: waar kijk je en welke minuut van de wedstrijd het was, gevolgd met een hashtag <i>#thetimeofthegame</i> (figuur 5, 6). Er volgden honderden foto’s van over de hele wereld. Met dit project laat hij perfect de omvang van het ritueel zien. Het laat de populariteit en toegankelijkheid van voetbal zien, de collectieve ervaringen die mensen op verschillende niveaus delen, de transnationale ruimte, de democratie van het scherm, de camera en de social media, de gemeenschappelijke ruimte van technologie. De tijd creëert zijn eigen gevoel van gemeenschap. De fysieke publieke ruimte word een online publieke ruimte. En deze publieke ruimte wordt publieke tijd. In het grootste ritueel ter wereld staat dus het digitale scherm centraal. 
+ </p>
+
+
+        <div class="sections">
+            <section id="Conclusie"><h2>4. De belangrijkste bijzaak ter wereld</h2></section>
+		</div>
+				<h3><a name="Conclusie">4.1 Conclusie</a></h3>
+				
+				<p>In de loop van de tijd heeft het ritueel zich uit de religieuze context bevrijd en is het geaccepteerd als een algemeen menselijk gegeven, dat op zekere hoogte religieus gedrag verklaart. Het ritueel heeft een functie van structuur en betekenis en als gevolg hiervan kunnen identiteiten vorm krijgen. Émile Durkheim benadrukte dat ook geseculariseerde samenlevingen rituelen nodig hebben en veronderstelde dat er nieuwe vormen van collectief enthousiasme opwekkende feestelijke bijeenkomsten konden ontstaan die de samenbindende werking van godsdienstige bijeenkomsten zouden overnemen. De secularisatie heeft er dan ook niet voor gezorgd dat rituelen uitgestorven zijn - sterker nog - we leven in een tijd met rituelen in overvloed.</p>
+
+<p>Een van de rituelen van de moderne wereld is die van de populairste sport ter wereld: voetbal. De omvang van het voetbal is zo groot dat geen enkele religie of culturele praktijk groter is en de geografische reikwijdte kan evenaren. Naast het feit dat voetbalwedstrijden zelf als ritueel kunnen worden beschouwd, kan aan de hand van de functionele benadering van het ritueel van met name Durkheim worden geconcludeerd dat de internationale voetbaltoernooien als cyclisch en collectief ritueel optreden voor de kijker, de supporters, de gemeenschap, zowel op nationaal als internationaal niveau.  </p>
+
+<p>Bij de evenementen als het EK en WK worden verscheidene positieve en negatieve emoties collectief ervaren en dit gevoel van <i>collective effervescence</i> zorgt voor het opzetten, onderhouden en versterken van de solidariteit, cohesie en sociale identificatie in groepen en gemeenschappen. Van de <i>collective effervescence</i> gaat een samenbindende werking uit waarbij men hun onderlinge verschillen overstijgt en zich meer met de groep identificeert. De voetbalevenementen beantwoorden een diepgaande behoefte om ons te identificeren met iets wat onszelf overstijgt. Het is een sociale vluchtheuvel geworden waar we kunnen ontsnappen aan onze individualistische cultuur. </p>
+
+<p>Een andere belangrijke factor voor de aantrekkingskracht van het ritueel is het verschijnsel <i>Basking in Reflected Glory</i>: door zich te associeren met het voetbalteam krijgt men het gevoel zelf succesvol te zijn, hetgeen resulteert in het welbekende: wij hebben gewonnen. Daarnaast switcht men voortdurend van deelpersoonlijkheid en gebruiken deze die het beste bevalt in een bepaalde context. Tijdens een evenement als het WK zijn mensen daarom graag ‘voetbalfan’.</p>
+
+<p>De eenvoudigste en belangrijkste manier om de gemeenschap en collectiviteit te ervaren is het uniform kleden. Hierbij worden nationale kleuren en symbolen ingezet binnen het carnavaleske karakter van het sportspektakel, veelal in de vorm van vlaggen, kleuren en shirts. Deze groepssymbolen krijgen hun waarde door de <i>collective effervescence</i>, dat niet alleen zorgt voor de binding van individuen tot een gemeenschap, maar zorgt ook voor een sterk kader voor de creatie van symbolen en de belichaming van gedeelde betekenissen die de gemeenschap definiëren. De groepssymbolen die onderdeel zijn van het ritueel worden emotioneel geladen en worden zo ook effectief buiten het kader van het ritueel en vertegenwoordigen de groep. Dit verklaart het massale gebruik van voornamelijk nationale vlaggen en kleuren. Waar dit op het eerste gezicht geen nut lijkt te hebben, heeft dit alles te maken met de symbolische waarde en het ervaren van collectiviteit. Dit wordt versterkt door de toename van patriottisme, dat wordt veroorzaakt door het ervaren van positieve collectieve emoties tijdens het ritueel, waardoor men zich meer met de groep en dus natie identificeert. Het collectieve ritueel geeft ook de gelegenheid om uit de band te springen, dingen te doen niet normaal niet kunnen en om nationalistische gevoelen te uiten, waardoor de gekte soms absurde vormen aanneemt. </p>
+
+<p>De invloed van televisie, radio, internet en de printmedia is niet te onderschatten. Overal wordt door alle belanghebbenden ingespeeld op het voetbalevenement dat komen gaat of bezig is, waarbij voornamelijk gebruik wordt gemaakt van de groepssymbolen als de nationale kleur en vlag. Door de televisie en het feit dat iedereen online is treedt nu ook buiten lijfelijke nabijheid de aanstekelijkheid op en verspreiden gevoelens explosief. Dit alles wordt nog eens versterkt door de beeldcultuur. Het is vrijwel onmogelijk om aan deze collectieve hype te ontsnappen. </p>
+
+<p>De digitale massamedia hebben ervoor gezorgd dat we massaal kunnen deelnemen en hebben als belangrijkste verandering de verschuiving van de ruimte van het ritueel teweeg gebracht. Waar het stadion de vaste plek van het ritueel was, is dat nu overal waar toegang is tot een scherm, een transnationale ruimte waar het vervolgens ook als live ervaren wordt. Het delen van de emoties en ervaringen gebeurd dan nog steeds collectief en is het alsnog een lijfelijke deelname van het ritueel. Het delen van de ervaringen heeft zich echter uitgebreid naar online, waardoor collectiviteit nu ook kan worden ervaren terwijl je fysiek alleen bent. Het scherm is het bindende centrum geworden. Als de wedstrijd begint treden de deelnemers toe tot dezelfde tijd. En waar je dus als fysiek collectief deel kunt nemen aan het ritueel kan dit nu ook in de gemeenschappelijke ruimte van de technologie. De fysieke publieke ruimte wordt hier een online publieke ruimte.</p>
+
+<p>Het ritueel vind plaats op ongekend veel plekken tegelijk; het stadion zelf, publieke plekken overal ter wereld, thuis, online. Door deze ontwikkelingen en doordat de voetbalevenementen een aantrekkingskracht hebben op zoveel verschillende vlakken en het massaal ondersteund en versterkt wordt door de media, is de WK-Finale de grootste simultane menselijke ervaring ooit en daarbij het grootste ritueel ter wereld. De ervaring gaat voorbij aan het daadwerkelijke onderwerp: voetbal. Het is uniek dat zoveel mensen tijdelijk een heel duidelijke, gemeenschappelijk gedeelde identiteit hebben. Daarbij is het een feestelijk fenomeen, lijkt het leeg en zonder consequenties en zal het je leven niet drastisch veranderen, maar toch zorgt het ervoor dat grenzen vervagen, verschillen worden geslecht, samenlevingen worden verenigd en dit alles wordt veelal geuit door <i>en masse</i> uniform gekleed te gaan. Achter die eenheidsworst zit een behoefte die in de samenleving niet of nauwelijks vervuld wordt, en het gaat daarbij dus niet zozeer om het voetbal zelf. Voetbal als belangrijkste bijzaak ter wereld.
+</p>
+				
+				
+		<div class="sections">
+            <section id="Eindnoten"><h2>Eindnoten</h2></section>
+		</div>
+			<br/>
+			<br/>	
+			
+			 <p>1. www.encylco.nl <a name="fn1" href="#fr1">↩</a></p>
+			 <p>2. Durkheim, E. (1912/1995) – <u>The Elementary Forms of the Religious Life</u>, New York: The Free Press <a name="fn2" href="#fr2">↩</a></p>
+				
+		<div class="sections">
+            <section id="DSM-IV"><h2>DSM-IV</h2></section>
+		</div>	
+			<br/>
+			<br/>
+				
+				<p>DSM-IV criteria
+De criteria voor de diagnose van AD(H)D zijn vastgelegd in het handboek DSM-IV. DSM staat voor Diagnostic Statistical Manual of Mental Disorders, het internationale classificatiesysteem van de geestelijke gezondheidszorg. De huidige versie (uit 2000) is een tekstrevisie van de vierde editie, aangeduid als DSM-IV-TR. ADD wordt in de DSM gezien als subtype van ADHD, namelijk type 1, het overwegend niet-oplettende type. De scores op deze criteria helpen medici bij het vaststellen van de diagnose, maar ze geven niet de doorslag.<br><br><br><br><br>
+<h1>Criteria voor de diagnose AD(H)D</h1>
+<p><b>A.</b> Er is sprake van (1) en/of (2)
+<b><h3>1. Aandachtstekort<br></h3></b>
+<p> Ten minste 6 van de 9 volgende symptomen bestaan al minstens een halfjaar in een mate die onaangepast is en niet in overeenstemming is met het verstandelijke niveau:<br><br>
+– let vaak niet goed op details of maakt slordigheidsfouten in schoolwerk of bij andere activiteiten<br><br>
+– heeft vaak moeite om de aandacht bij een taak of spel te houden<br><br>
+– lijkt vaak niet te luisteren wanneer iemand het woord tot hem of haar richt<br><br>
+– heeft vaak moeite om instructies volledig te volgen en maakt schoolwerk, taken of verplichtingen op het werk niet af (niet het gevolg van oppositioneel gedrag of het onvermogen instructies te begrijpen)<br><br>
+– heeft vaak moeite om taken en activiteiten te organiseren<br><br>
+– gaat taken die een langdurige mentale inzet vereisen (zoals schoolwerk of huiswerk) vaak uit de weg; heeft er een hekel aan of toont tegenzin ermee te beginnen<br><br>
+– raakt vaak dingen kwijt die nodig zijn voor taken of bezigheden (bijvoorbeeld speelgoed, opgaven van school, potloden, boeken of gereedschap)<br><br>
+– wordt vaak gemakkelijk afgeleid door uitwendige prikkels<br><br>
+– is vaak vergeetachtig bij dagelijkse bezigheden<br><br>
+<h3><b>2. Hyperactiviteit/impulsiviteit</b><br></h3>
+<p> Ten minste 6 van de 9 volgende symptomen bestaan al minstens een half jaar in een mate die onaangepast is en niet in overeenstemming is met het verstandelijke niveau:<br><br>
+<b> Hyperactiviteit</b><br>
+– beweegt vaak onrustig de handen of voeten of wiebelt op zijn stoel<br><br>
+– staat op van zijn plaats in de klas of in andere situaties waar wordt verwacht dat iemand blijft zitten<br><br>
+– rent in situaties waar dit ongepast is vaak rond of klautert overal op (bij adolescenten en volwassenen kan dit beperkt blijven tot een subjectief gevoel van rusteloosheid)<br><br>
+– kan moeilijk rustig spelen of zich bezighouden met ontspannende activiteiten<br><br>
+– is vaak in de weer of draaft maar door<br><br>
+– praat vaak aan een stuk door<br><br>
+
+<b>Impulsiviteit</b><br>
+– gooit het antwoord er al uit voordat de vraag is afgemaakt<br><br>
+– verstoort vaak bezigheden van anderen of dringt zich op<br><br>
+– heeft vaak moeite met op zijn/haar beurt te wachten<br><br>
+<b>En behalve aan (1) en/of (2) voldoen de symptomen aan de volgende kenmerken:</b><br><br>
+– voor de leeftijd van 7 jaar was al sprake van enige symptomen op het gebied van hyperactiviteit, impulsiviteit of gestoorde aandacht, die aanleiding geven tot disfunctioneren<br><br>
+– enig disfunctioneren als gevolg van de symptomen doet zich voor in twee of meer contacten (bijvoorbeeld op school en thuis)<br><br>
+– er moet sprake zijn van duidelijke tekenen van niet goed functioneren op school, thuis, met vriendjes e.d.<br><br>
+<b>B.</b> Enkele symptomen van hyperactiviteit-impulsiviteit of onoplettendheid die beperkingen veroorzaken waren voor het zevende jaar aanwezig.<br><br>
+<b>C.</b> Enkele beperkingen uit de groep symptomen zijn aanwezig op twee of meer terreinen (bijvoorbeeld op school, werk en thuis).<br><br>
+<b>D.</b> Er moeten duidelijke aanwijzingen van significante beperkingen zijn in het sociale, school- of beroepsmatig functioneren.<br><br>
+<b> E.</b> De symptomen komen niet uitsluitend voor in het beloop van een pervasieve ontwikkelingsstoornis, schizofrenie of een andere psychotische stoornis en zijn niet eerder toe te schrijven aan een andere psychische stoornis (bijvoorbeeld stemmingsstoornis, angststoornis, dissociatieve stoornis of een persoonlijkheidsstoornis).<br/><br>
+				
+				
         </article>
-    <script src="js/jquery-1.11.3.js"></script> <!-- 
-        With the script tags you put scripts and load in external scripts.
-        you always need to explicitly <open> and </close> the script tag
-        Here we are loading in jQuery. jQuery is a library that contains a lot functions that are
-        like building blocks for scripts. It makes it easier to write your own scripts.
-        Also, many examples you will find online will use jQuery (you can recognise it
-        it if they use the $ sign). In the case you will first need to load jQuery-->
-    <script src="js/scripts.js"></script>
-        <!-- We use an external file for our scripts, just like we use an external file for
-             our css styles. -->
+        
+       
+
+		
+		<footer>
+		<a href="http://www.janablom.com/">Jana Blom</a><br/>
+		KABK Grafisch Ontwerp<br/>
+		Scriptie 2016
+		</footer>
     </body>
     
+<!-- ** note: Normally, just <html lang="en"> would be enough, but we add some extra attributes ‘xmlns’ and ‘xml:lang’ that ePub likes,
+     in case we are going to make an electronic book out of this website! -->
 </html>

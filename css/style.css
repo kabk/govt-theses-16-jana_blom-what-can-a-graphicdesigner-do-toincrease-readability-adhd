@@ -1,204 +1,686 @@
-a {color:pink;}
-
-body {
-    font-size: 21px;
-    line-height: 24px;
-    padding: 8px 16px 0px 8px;
-    font-family: NeueHaasUnicaPro-Light, sans-serif;
-    font-weight: 100;
-}
-
-* {
-    box-sizing: border-box;
+body {	
+	background-color:white;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 header {
-    padding: 0 0 20px 0;
-    font-size: 30px;
-    text-decoration: line-through;
+    font-size: 22px;
+	margin-left: 0px;
+	font-family: 'Noto Sans', sans-serif;
+	margin-top: 50px;
+	letter-spacing: 1px;
+	font-weight: 100;
 }
 
-article { 
-    max-width: 602px;
+
+/* maak een 'timeline' */
+#progress{
+	/*background-color:#C6A31F;*/
+	background-color:/*rgba(198,163,31,0.98);*/rgba(41,224,162,0.95);
+	display:block;
+    width:100%;
+	position:fixed;
+	top:0px;
+	height:50px;
+	
+	/* bovenop maar toch klikbaar */
+	z-index:1;
+	pointer-events: none;
+	
+	overflow:hiden;
 }
 
-#example article {
-    max-width: 734px;
-    margin-left: 300px;
+
+nav{
+	width: 250px;
+	position: fixed;
+	font-size: 19px;
+	line-height: 28px;
+	left: 10px;
+	text-align: left;
+	text-transform: uppercase;
+	font-family: Helvetica, sans-serif;
+	letter-spacing: 0.04em;
+	top: 15px;
+	z-index: 999;
+	
+	
 }
 
-#example nav {
-    float: left;
-    width: 280px;
-    height: 100%;
+footer{
+	font-family: Helvetica, sans-serif;
+	position: fixed;
+	bottom: 15px;
+	text-align: left;
+	left: 10px;
+	width: 250px;
+	font-size: 10px;
+	line-height: 18px;
+	left: 10px;
+	text-align: left;
+	text-transform: uppercase;;
+	letter-spacing: 0.04em;
+	padding-left: 15px;
+	
 }
 
-#example article {
-    clear: all;
+titel{
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	display: inherit;
+	text-align: center;
+	color: white;
+	margin-top: -400px;
+	border: solid white 2px;
+	font-size: 60px;
+	width: 60%;
+	margin-bottom: 0px;
+	line-height: 68px;
+	text-transform: uppercase;;
+	letter-spacing: 0.04em;
+	transform: rotate(6deg);
+	margin-right:auto;
+    margin-left: auto;
 }
 
-@media screen and (max-width: 768px) {
-   #example nav {
-       float: none;
-   }
-   #example article {
-       margin-left: inherit;
-   }
+ondertitel{
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	display: block;
+	color: white;
+	text-align: center;
+	border: solid white 2px;
+	margin-top: 70px;
+	width: 70%;
+	font-size: 40px;
+	margin-bottom: -10px;
+	line-height: 60px;
+	text-transform: uppercase;;
+	letter-spacing: 0.04em;
+	transform: rotate(-10deg);
+	margin-right:auto;
+    margin-left: auto;
 }
 
+img {
+    width:64%;
+    display: block;
+    height: auto;
+    margin-right:auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: inherit;
+}
+
+
+article {
+	margin-top: 50px;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 17px;
+	color: black;
+	z-index: 1;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: white;
+
+}
+
+
+h1, h2, h3, h4,h5, h6 {
+    margin: 10px 180px;
+	font-family: 'Helvetica', sans-serif;
+	color: black;
+	margin: 0px auto;
+	width: 50%;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	margin-top: 50px;
+}
+
+h1{
+	margin-bottom: 200px;
+	margin-top: -100px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	padding-right: 70px;
+	font-size: 60px;
+
+}
+
+h2{
+	margin-top: 28px;
+	letter-spacing: 0.06em;
+	text-indent: -35px;
+}
+
+
+h3{
+	letter-spacing: 0.04em;
+	text-indent: -35px;
+}
+
+h4{
+	letter-spacing: 0.04em;
+	font-size: 19px;
+	color: black;
+	
+}
+
+h6{
+	letter-spacing: 0.04em;
+	font-size: 40px;
+	color: black;
+	transform:rotateZ(-15deg);
+	text-align: right;
+	width: 100%;
+	margin-top: 150px;
+	margin-bottom: -200px;
+
+	
+}
+
+
+
+ul, ol {
+    padding-left: 15px;
+    z-index: 999;
+}
+
+
+/* Sections */
+
+section {
+  width: 100%;
+  padding-top: 1px;
+  background: #e8e5e5;
+  margin-bottom: -20px;
+}
+section:nth-child(even) {
+  background: #1fc9f3;
+}
+section:nth-child(odd) {
+  background: #ffffff;
+}
+.sections section:first-child {
+  margin-top: 10px;
+}
+section.active {}
+
+
+
+blockquote {
+	font-family: 'Note Sans', sans-serif;
+	font-size: 19px;
+	margin: 0px auto;
+	margin-bottom: 30px;
+	width: 40%;
+	font-style: italic;
+	line-height: 1.45;
+	position: relative;
+	color: black;
+}
+
+
+a{
+	color:black;
+	text-decoration: none;
+	cursor: url(http://payload194.cargocollective.com/1/6/220116/6186237/cursor.gif), auto;
+	
+}
+
+
+
+a:hover{
+	color: black;	
+	border-bottom: 2px solid black;
+} 
+a:visited{
+	color:black;
+}
+a:active {
+    color: gray;
+}
+
+p {
+	font-size: 19px;
+    margin: 0px auto;
+	width: 50%;
+	line-height: 1.6;
+	margin-bottom: 25px;
+	
+	
+}
+
+/* This makes the images scale to the full width of the page */
+
+
+
+#headerimg {
+  position: relative;   
+  width: 100%; 
+  margin-top: -100px;
+}
+
+#headerimg img { 
+  margin: auto; 
+  min-width: 100%;
+}
+
+
+
+
+img.noscale {
+    width: inherit;
+}
+
+#footnote_gedicht {
+	display: inline;
+	z-index: 1000;
+	font-size: 15px;
+	width: 350px;
+}
+
+
+a[rel="footnote"] {
+    border-bottom: none;
+    line-height: 0;
+}
+
+
+
+@media screen and (min-width: 701px) and (max-width: 1000px){
+body {
+    padding: 0px 0px 0px 0px;	
+	background-color: #ffffff;
+}
+
+header {
+    font-size: 10px;
+	font-family: Helvetica, sans-serif;
+	margin-left: 0px;
+}
+
+nav{
+	width: 250px;
+	position: fixed;
+	font-size: 10px;
+	line-height: 8px;
+	left: 0px;
+	text-align: left;
+	text-transform: uppercase;
+	font-family: Helvetica, sans-serif;
+	letter-spacing: 0.04em;
+	top: 10px;
+	
+}
+
+footer{
+	display: block;
+	position: fixed;
+	bottom: 20px;
+	left: 0px;
+}
+
+img {
+    width:70%;
+    display: block;
+    height: auto;
+    margin-right:auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-right: 80px;
+}
+
+titel{
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	display: inherit;
+	text-align: center;
+	color: white;
+	margin-top: -230px;
+	border: solid white 2px;
+	font-size: 40px;
+	width: 60%;
+	margin-bottom: 0px;
+	line-height: 48px;
+	text-transform: uppercase;;
+	letter-spacing: 0.04em;
+	transform: rotate(6deg);
+	margin-right:auto;
+    margin-left: auto;
+}
+
+ondertitel{
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	display: block;
+	color: white;
+	text-align: center;
+	border: solid white 2px;
+	margin-top: 50px;
+	width: 70%;
+	font-size: 25px;
+	margin-bottom: -10px;
+	line-height: 35px;
+	text-transform: uppercase;;
+	letter-spacing: 0.04em;
+	transform: rotate(-6deg);
+	margin-right:auto;
+    margin-left: auto;
+}
+
+
+
+
+article {
+	margin-top: 25px;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 18px;
+}
 
 li {
     list-style: none;
     margin-bottom: 8px;
 }
 
-dt, dd {
-    margin-bottom: 2px;
+
+h1, h2, h3, h4,h5, h6 {
+	font-family: 'Helvetica', sans-serif;
+	color: black;
+	margin: 0px auto;
+	width: 80%;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	margin-top: 50px;
 }
 
-dt {
-    margin-top: 6px;
+
+h1{
+	font-size: 25px;
+	color: black;
+	width: 50%;
+	
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 100;
-    margin: 0;
-    margin-top: 21px;
-    padding: 0;
+h2{
+	margin-top: 0px;
+	font-size: 20px;
+	color: black;
+	width: 50%;
+	
 }
 
-h1 {
+h3{
+	font-size: 15px;
+	color: black;
+	width: 50%;
+	margin-bottom: 30px;
 }
 
-h2, h3 {
-    font-size: 36px;
-    line-height: 40px;
+blockquote {
+	font-family: 'Note Sans', sans-serif;
+	font-size: 16px;
+	margin: 0px auto;
+	margin-bottom: 30px;
+	width: 50%;
+	font-style: italic;
+	line-height: 1.6;
+	position: relative;
+	color: #000000;
 }
 
-h2 {
-    text-transform: uppercase;
-}
 
-h4, h5 {
-  font-size: 27px;
-  line-height: 30px;
-}
-
-h4 {
-    text-transform: uppercase;
-}
-
-h2 a {
-    text-decoration: none;
-}
-
-h6 {
-  font-size: 21px;
-  line-height: 24px;
-}
 
 
 ul, ol {
-    margin-top: 20px;
     padding-left: 20px;
 }
 
-a, a:hover, a:visited, a:active {
-    color: black;
-}
 
-a.group4, a.group4:hover, a.group4:visited, a.group4:active {
-    color: #0cf6ff;
-}
-
-a.group3title, a.group3title:hover, a.group3title:visited, a.group3title:active {
-    color: #0000FF;
-    font-size: 25px;
-}
-
-a.group3, a.group3:hover, a.group3:visited, a.group3:active {
-    color: #0000FF;
+a{
+	color:black;
+	text-decoration: none;
 }
 
 
-p, svg {
-    margin-top: 0;
-    margin-bottom: 24px;
+a:hover{
+	color: black;	
+	border-bottom: 1px solid black;
+} 
+a:visited{
+	color:black;
+}
+a:active {
+    color: gray;
 }
 
 p {
-  font-size: 21px;
-  line-height: 24px;
-  margin: 14px 0;
+	font-size: 16px;
+    margin-top: 0;
+	line-height: 1.8;
+	margin-bottom: 25px;
+	margin-right: 80px;
+	width: 70%;
+	
+	
 }
 
-p.spacer {
-    line-height: 0;
+
+
+	
 }
 
-pre {
-    white-space: pre-wrap;
+
+
+
+/* test tweede media, tussengrootte */
+
+
+@media screen and (max-width: 700px) {
+body {
+    padding: 0px 0px 0px 0px;	
+	background-color: #ffffff;
 }
 
-figure {
-    margin: 0;
-    padding: 1em 40px;
+header {
+    font-size: 10px;
+	font-family: 'Noto Sans', sans-serif;
+	margin-left: 0px;
 }
 
-figure figcaption {
-    padding-top: 1em;
+nav{
+	display: none;
+	position: absolute;
+	width: 120px;
+	margin-top:0px;
+	font-size: 15px;
+	color: black;
+	font-family: Helvetica, sans-serif;
 }
 
-/* This makes the images scale to the full width of the page */
+footer{
+display: none;
+}
+
 img {
-    max-width: 600px;
-    max-height: 315px;
-    width: 100%;
+    width:100%;
+    display: block;
     height: auto;
+    margin-right:auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 0px;
 }
 
-header select {
-    float: right;
+titel{
+	font-family: Helvetica, sans-serif;
+	display: inherit;
+	text-align: center;
+	color: white;
+	font-weight: 200;
+	margin-top: -90px;
+	border: solid white 1px;
+	font-size: 18px;
+	width: 90%;
+	margin-bottom: 0px;
+	line-height: 22px;
+	text-transform: uppercase;;
+	letter-spacing: 0.04em;
+	transform: rotate(2deg);
+	margin-right:auto;
+    margin-left: auto;
 }
 
-div.preview {
-  max-width: 602px;
-  margin-bottom: 30px;
+ondertitel{
+	font-family: Helvetica, sans-serif;
+	font-weight: 200;
+	display: block;
+	color: white;
+	text-align: center;
+	border: solid white 1px;
+	margin-top: 10px;
+	width: 60%;
+	font-size: 15px;
+	margin-bottom: -10px;
+	line-height: 17px;
+	text-transform: uppercase;;
+	letter-spacing: 0.04em;
+	transform: rotate(-3deg);
+	margin-right:auto;
+    margin-left: auto;
 }
 
-div.preview figure {
-  border: 1px solid #ccc;
-  border-bottom: none;
-  margin: 0;
-  padding: 0;
+
+article {
+	margin-top: 25px;
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
 }
 
-div.preview p:last-child {
-  margin-bottom: 54px;
+li {
+	color: black;
+    margin-bottom: 8px;
 }
 
-@media screen and (max-width: 480px) {
-    header select {
-        float: left;
-    }
-    header h1 {
-       font-size: 20px;
-   }
-   p {
-     font-size: 16px;
-     line-height: 24px;
-     margin: 14px 0;
-   }
+
+h1, h2, h3, h4,h5, h6 {
+    margin: 20px 55px;
+	font-family: Helvetica, sans-serif;
+	color: black;
 }
 
-@media screen and (min-width: 480px) {
-    article, header {
-        margin-left: 40px;
-    }
+
+h1{
+	font-size: 25px;
+	color: black;
+	width: 70%;
+	margin-left: 20px;
+	
 }
 
-@media print {
-    header select {
+h2{
+	margin-top: 0px;
+	font-size: 20px;
+	color: black;
+	width: 80%;
+	margin-bottom: -20px;
+	margin-top: 10px;
+	
+}
+
+h3{
+	font-size: 15px;
+	color: black;
+	width: 80%;
+	
+}
+
+blockquote {
+	font-family: 'Note Sans', sans-serif;
+	font-size: 12px;
+	margin: 0px auto;
+	margin-bottom: 30px;
+	width: 70%;
+	font-style: italic;
+	line-height: 1.6;
+	position: relative;
+	color: #000000;
+}
+
+
+
+
+ul, ol {
+    padding-left: 20px;
+}
+
+
+a{
+	color:black;
+	text-decoration: none;
+}
+
+a:hover{
+	color: black;	
+} 
+a:visited{
+	color:black;
+}
+a:active {
+    color: gray;
+}
+
+p {
+	font-size: 12px;
+    margin-top: 0;
+	line-height: 1.8;
+	margin-bottom: 25px;
+	margin-left: 30px;
+	width: 90%;
+	
+	
+}
+
+
+	
+}
+
+/* eind test */
+
+/* @media only screen and (min-width: 46em) {
+   
+} */
+
+@media only print {
+	body{
+		background-color: none;
+	}
+    /**
+     * When printing, the header is useful but it doesnÃ¢â‚¬â„¢t need
+     * to be so big
+     */
+    header h1, h2{
+        font-size: 18pt;
+        font-weight: normal;
+    } 
+	article {
+		margin-left: 200px;
+		margin-right: -300px;
+		font-size: 12pt;
+	}
+    /* And the navigation we donÃ¢â‚¬â„¢t need */
+    nav {
         display: none;
     }
+	footer{
+		font-size: 8pt;
+		line-height: 1.2;
+	}
 }
