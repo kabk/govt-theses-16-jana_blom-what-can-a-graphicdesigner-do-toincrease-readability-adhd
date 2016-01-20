@@ -22,7 +22,8 @@
         <meta property="dc:creator" content="Jana Blom">
         <meta property="dc:created" content="2016-01-13T00:00:00Z">
         <meta property="dc:modified" content="2016-01-13T00:00:00Z">
-        <meta property="og:image" content="http://kabk.github.io/govt-theses-15/images/header.png" />
+        <meta property="og:image" content="http://kabk.github.io/govt-theses-16-jana_blom-what-can-a-graphicdesigner-do-toincrease-readability-adhd/images/header.png
+" />
         
         <meta property="og:title" content="How can I, as graphic designer make written information more accesible to people with ADHD?" /><!-- The title that appears on Facebook-->
         <meta property="dc:title" content="How can I, as graphic designer make written information more accesible to people with ADHD?" /><!-- Specify the title with the Dublin Core Metadata standard for archival purposes-->
@@ -40,8 +41,30 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,400' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		
-	    <script src="js/modernizr.custom.js"></script>
-	    <script src="js/jquery.min.js"></script><style type="text/css">
+	   <!-- <script src="js/modernizr.custom.js"></script> -->
+	    <script src="js/jquery.min.js"></script>
+
+        <style type="text/css">
+            body{
+        margin: 0; 
+        padding: 0;
+    }
+
+    body, html{
+        height: 100%;
+    }
+
+    .wrapper{
+        height: 100%;
+    }
+    .tail{
+        width: 100%; 
+        height:;
+        background: #ccc; 
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+    }
 
     .dragme {
         position:relative;
@@ -59,6 +82,39 @@
         border: 1px solid #000; *//
     }
       </style>
+      <script src="js/jquery.min.js"></script>
+
+<script>
+(function() {
+    
+    var mX, mY, distance,
+        $element  = $('.tail');
+
+    function calculateDistance(elem, mouseX, mouseY) {
+        return Math.floor(Math.sqrt(Math.pow(mouseY - (elem.offset().top+(elem.height())), 2)));
+    }
+
+    $(document).mousemove(function(e) {  
+        mX = 0;
+        mY = e.pageY;
+        distance = calculateDistance($element, mX, mY);
+        $('.tail').css({
+            height: distance
+        });
+
+    });
+
+})();
+</script>
+      <script>
+$(document).bind('mousemove', function(e){
+    var width = $('#tail').width()/2;
+    $('#tail').css({
+       left:  e.pageX-width,
+       top:   e.pageY
+    });
+});
+</script>
 	    <script>
 	    $(function() {
 	      $('a[href*=#]:not([href=#])').click(function() {
@@ -78,9 +134,15 @@
       $( window ).mousemove(function( event ) {
         $("#progress").css("top", event.pageY);
       });
-<SCRIPT TYPE="text/javascript"> <!-- function popup(mylink, windowname) { if (! window.focus)return true; var href; if (typeof(mylink) == 'string') href=mylink; else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); return false; } //--> </SCRIPT>
+<SCRIPT TYPE="text/javascript"> <!-- function popup(mylink, windowname) { if (! window.focus)return true; var href; if (typeof(mylink) == 'string') href=mylink; else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); return false; }  </SCRIPT> 
 Read more at http://www.htmlcodetutorial.com/linking/linking_famsupp_88.html#EulJsHBFHGC5Lqc0.99
-	    <script type="text/javascript">
+	 <script type="text/javascript"> 
+<!--
+window.onload = function() { try {
+window.open('yourdesiredpage.html','popup!'); } catch(e) { alert('Unable to open another window!'); } }
+//-->
+</script>
+        <script type="text/javascript">
         function startDrag(e) {
             // determine event object
             if (!e) {
@@ -131,7 +193,13 @@ Read more at http://www.htmlcodetutorial.com/linking/linking_famsupp_88.html#Eul
       </script>
     </head>
     <body>
+<div class="wrapper">
 
+    <div class="content"></div>
+
+    <div class="tail"></div>
+     
+</div>
       <div id="progress">
 </div>
 

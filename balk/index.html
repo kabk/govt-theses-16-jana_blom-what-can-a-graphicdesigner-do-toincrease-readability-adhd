@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Raar</title>
+  <style>
+    body{
+        margin: 0; 
+        padding: 0;
+    }
+
+    body, html{
+        height: 100%;
+    }
+
+    .wrapper{
+        height: 100%;
+    }
+    .tail{
+        width: 100%; 
+        height:;
+        background: #ccc; 
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+    }
+
+  </style>
+</head>
+<body>
+ 
+ 
+
+<div class="wrapper">
+
+    <div class="content"></div>
+
+    <div class="tail"></div>
+     
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+(function() {
+    
+    var mX, mY, distance,
+        $element  = $('.tail');
+
+    function calculateDistance(elem, mouseX, mouseY) {
+        return Math.floor(Math.sqrt(Math.pow(mouseY - (elem.offset().top+(elem.height())), 2)));
+    }
+
+    $(document).mousemove(function(e) {  
+        mX = 0;
+        mY = e.pageY;
+        distance = calculateDistance($element, mX, mY);
+        $('.tail').css({
+            height: distance
+        });
+
+    });
+
+})();
+</script>
+</body>
+</html>
