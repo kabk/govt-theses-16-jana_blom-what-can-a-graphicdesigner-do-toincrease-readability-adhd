@@ -311,4 +311,18 @@ section.active {}
 0 0 4px white, 
 0 0 4px white; 
 }
+
+@media print { 
+	.index-print{
+		display: inherit;	
+	}
+
+	div {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+	
+}
+
 	
