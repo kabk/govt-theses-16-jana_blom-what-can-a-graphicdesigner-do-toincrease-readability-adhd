@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body	{
+	background-color: #1b3690;
+}
+
+#head {
+	margin:0 auto;
+	width: 600px;
+}
+
+#menu {
+	font-family: 'Lora', serif;
+	font-weight: 400px;
+	font-size: 20px;
+   	position: fixed;
+	text-decoration: none;
+  	left: -20px;
+  	top: 30%;
+  	width: 20em;
+  	margin-top: -2.5em;
+ 	line-height: 30px;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 600;
+	color: #ffd700;
+}
+
+r {
+	font-variant: small-caps;
+}
+
+a:hover{
+	color: black;	
+	border-bottom: 1px solid black;
+} 
+a:visited{
+	font-style: italic;
+}
+
+.antwoord {
+none;}
+
+#container {
+	width: 50%;
+	margin: 100px auto 100px auto;
+}
+
+p {
+	color: #fff;
+	margin-left: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+}	
+	
+li {
+	color: #fff;
+	margin-left: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800px;
+	font-style: italic;
+	font-size: 20px;
+}
+
+H1 	/* Titel */ {
+	font-size:34px;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	margin-top: 170px;
+	font-weight: 700;
+	line-height: 8px;
+}	
+
+H2 	/* Onder Titel */ {
+	margin-left: 20px;
+	color: #fff;
+	margin-bottom: 10px;
+	font-size:22px;
+
+	font-weight: 400;
+}	
+
+H3 /* Titel hoofdstukken */ {
+	color: #fff;
+	font-family: 'Lora', serif;
+
+}
+
+H5 { /*tussen teksten kleiner*/
+	margin-left: 50px;
+	margin-right: 60px;
+	font-size: 18px;
+	font-weight: 300;
+	font-style: italic;
+	font-family: 'Open Sans', sans-serif;
+	color:white;
+}
+
+h6 {
+	font-family: 'Open Sans', sans-serif;
+	margin: -20px -20px -20px 20px; 
+	font-size: 20px;
+	font-weight: 700px;
+	color: white;
+}
+
+h77 {
+	color: #fff;
+	margin-left: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+h8 {
+	color: #fff;
+	margin-right: -40px;
+	padding-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+h9 { /*hoofdlettersbold&*/
+	text-align: center;
+	color: #fff;
+	margin-left: 20px;
+	text-decoration: underline;
+	font-weight: 900;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+}
+
+div h4 {
+    border-color: white;
+    border-style: dotted;
+    border-width: 4px;
+    padding: 30px 30px 20px 30px;
+    text-align: left;
+}
+
+/*div img {
+	width: 700px;
+	margin: 25px -20px 25px -20px;
+}*/
+
+
+H4 /* Quote */ { 
+	color:white;
+	font-size: 35px;
+	margin-left: 90px;
+	margin-right: -90px;
+	font-family: 'Lora', serif;
+	font-weight: 400px;
+	font-style: italic;
+}
+
+.big1 {
+	width: 700px;
+	margin: 25px -20px 25px -20px;
+}
+
+.small {
+	width: 350px;
+	padding: 5px;
+	position: center;
+	margin-right: 30px;
+	float: left;
+}
+
+.small2 {
+	height: 20px;
+}
+
+.small3 {
+	height: 500px;
+	padding-bottom: -10px;
+}
+
+.small4 {
+	width: 500px
+}
+
+.folders {
+	width:500px;
+	padding: 20px;
+}
+
+.folders1{
+	width: 290px;
+	margin: 5px;
+	display: inline-block;
+}
+
+.hh1 {
+	background-color: white;
+	padding: 5px 0px 5px 0px;
+}
+
+.hh2 {
+	background-color: black;
+	padding: 5px 0px 5px 0px;
+}
+
+.txtbord {
+	border: 8px solid #ffd700;;
+	width: 600px;
+	padding: 15px;
+}
+
+.coloms {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    height:600px;
+}
+
+.vraag {
+
+}
+
+.antwoord {
+	display: none;
+	}
+
+section {
+  width: 100%;
+  padding-top: 1px;
+  background: #1b3690;
+  margin-bottom: -20px;
+
+}
+section:nth-child(even) {
+  background: #1b3690;
+}
+section:nth-child(odd) {
+  background: #1b3690;
+}
+.sections section:first-child {
+  margin-top: 10px;
+}
+section.active {}
+
+.strokeme
+{
+  	font-family: 'Lora', serif;
+  	font-size: 100px;
+    color: #1b3690;
+    margin-top: 100px;
+    line-height: 70px;
+    text-shadow:
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white, 
+0 0 4px white; 
+}
+	
