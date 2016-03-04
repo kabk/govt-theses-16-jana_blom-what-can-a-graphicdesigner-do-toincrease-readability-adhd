@@ -54,12 +54,8 @@ It is not that people with ADHD are not interested in written content, but readi
 	<div id="container">
  	<div id="Head">
 
-<div class="vraag">     
-<div class="strokeme">Jana Blom - Scriptie Titel</div></div>
- 
-   <div class="antwoord">
-<h2>Hoe kan grafische vormgeving worden toegepast om het lezen van teksten te vergemakkelijken?
-voor mensen met ADHD</h2></div>
+    <p>Hoe kan grafische vormgeving worden toegepast om het lezen van teksten te vergemakkelijken?
+voor mensen met ADHD</p></div>
     
     
 <div class="sections">
@@ -97,7 +93,7 @@ voor mensen met ADHD</h2></div>
 		<p>Aan de hand hiervan wil ik literair onderzoek doen. Naar aanleiding van dit onderzoek zal ik stellingen bedenken die ik zal toetsen en kan ik vervolgens aanbevelingen doen hoe informatie zo aantrekkelijk mogelijk kan worden gepresenteerd voor <r>adhd</r>’ers (tekst model ‘Advising text on issue’)<br><br>
 
 		Daarnaast definieer ik wat grafische vormgeving betekent en hoe je dit in kan zetten. Ik denk niet per se dat er 1 juiste manier uitkomt omdat iedere <r>adhd</r>’er andere behoeftes heeft. Vaak wordt er gesuggereerd dat iemand met <r>adhd</r> rust, structuur en regelmaat nodig heeft, omdat hij/zij al zoveel chaos in haar hoofd heeft. Maar dat is helemaal niet voor iedereen de oplossing. Hetzelfde zal gelden voor de vormgeving, waar de ene het liefst veel ruis en drukte ziet wil de ander graag overzicht zien zonder al te veel poespas <a href="#fn1" name="fr1"><sup>(1)</sup></a>. </p>
-</div></div>
+</div>
 
     <div class="sections">
        	<section id="c2">
@@ -685,6 +681,44 @@ E. De symptomen komen niet uitsluitend voor in het beloop van een pervasieve ont
 			</p>
 </div>
 </div>
+    <!-- Sticky footer --> 
+    <footer>
+        <ul>
+            <li><a href="http://www.janablom.com/" target="_blank">JANA BLOM</a></li>
+            <li>KABK GRAFISCH ONTWERP</li>
+            <li>SCRIPTIE 2016</li>
+        </ul>
+    </footer>
+
+<!-- Leesbalk --> 
+<div class="tail"></div>
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$( document ).ready(function() {
+
+    // Calculate mouse distance
+    var mX, mY, distance,
+        $element  = $('.tail');
+
+    function calculateDistance(elem, mouseX, mouseY) {
+        return Math.floor(Math.sqrt(Math.pow(mouseY - (elem.offset().top+(elem.height())), 2)));
+    }
+
+    $(document).mousemove(function(e) {  
+        mX = 0;
+        mY = e.pageY;
+        distance = calculateDistance($element, mX, mY);
+        $('.tail').css({
+            height: distance
+        });
+    });
+
+  $("#draggable").draggable();
+
+});
+</script>
+
 <script src="jquery.min.js"></script>
 <script>
 $(document).ready(function(){
